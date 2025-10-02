@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include "bit.h"
 
 unsigned int SetBit(unsigned int value, int position){
     if(position < 0 || position >= 32){
