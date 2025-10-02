@@ -56,9 +56,15 @@ unsigned int ShiftRight(unsigned int value, int positions){
 }
 
 void PrintBinary(unsigned int value){
-
+    for(int i = 31; i >= 0; i--){
+        printf("%u", GetBit(value, i));
+        if(i % 8 == 0){
+            printf(" ");
+        }
+    }
+    printf("\n");
 }
 
 void PrintHex(unsigned int value){
-    
+    printf("0x%08X\n", value);
 }
