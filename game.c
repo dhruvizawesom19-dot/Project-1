@@ -37,3 +37,12 @@ int MovePiece(GameState *game, int from, int to){
     return 1;
 }
 
+int CheckWin(const GameState *game){
+    if((game->red_pieces | game->red_kings) == 0){
+        return 2; 
+    }
+    if((game->black_pieces | game->black_kings) == 0){
+        return 1;
+    }
+    return 0;
+}
