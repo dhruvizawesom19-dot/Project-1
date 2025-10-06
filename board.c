@@ -2,18 +2,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
+
 
 void InitializeBoard(GameState *game){
-    game->red_pieces = 0x00000000000FFF00ULL;
-    game->black_pieces = 0x00FFF00000000000ULL;
-    game->red_kings = 0ULL;
-    game->black_kings = 0ULL;
-    game->turn = 0;
+    // Black at top (rows 6–8)
+    game->black_pieces = 0x55AA550000000000ULL;
+    // Red at bottom (rows 1–3)
+    game->red_pieces   = 0x0000000000AA55AAULL;
+
+    game->red_kings    = 0ULL;
+    game->black_kings  = 0ULL;
+    game->turn = 0; // Red moves first
 }
 
+
 void PrintBoard(const GameState *game){
-   printf("\n   A B C D E F G H\n");
+    printf("\n   A B C D E F G H\n");
     for (int row = 7; row >= 0; row--) {
         printf("%d  ", row + 1);
         for (int col = 0; col < 8; col++) {

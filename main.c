@@ -1,12 +1,19 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
+#include <ctype.h>
 #include "board.h"
 #include "game.h"
 
+
+
 int coordToPos(char file, int rank){
-    int col = file - 'A';
-    int row = rank - 1;
+    if(!isalpha((unsigned char)file)) return -1;
+    int col = toupper((unsigned char)file) - 'A';
+    int r = rank;
+    if(col < 0 || col > 7) return -1;
+    if(r < 1 || r > 8) return -1;
+    int row = 8 - r; // flip
     return row * 8 + col;
 }
 
@@ -28,15 +35,21 @@ int main(){
 
         printf("%s's turn. Enter move (e.g., A3 B4): ", game.turn == 0 ? "Red" : "Black");
 
-        char fromFile, toFile;
-        int fromRank, toRank;
+        char fromFile = 0, toFile = 0;
+        int fromRank = 0, toRank = 0;
         if(scanf(" %c%d %c%d", &fromFile, &fromRank, &toFile, &toRank) != 4){
             printf("Invalid input format. Try again.\n");
-            while(getchar() != '\n');
+            while(getchar() != '\n'); // clear remainder
             continue;
         }
+
         int from = coordToPos(fromFile, fromRank);
-        int to = coordToPos(toFile, toRank);
+        int to   = coordToPos(toFile, toRank);
+
+        if(from < 0 || to < 0){
+            printf("Coordinates out of range. Use files A-H and ranks 1-8.\n");
+            continue;
+        }
 
         if(!MakeMove(&game, from, to)){
             printf("Invalid move. Try again.\n");
