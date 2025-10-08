@@ -1,0 +1,394 @@
+dhruvpatel@MacBook-Pro Project 1 % make      
+gcc -Wall -Wextra -std=c11 -o checkers main.o bit.o board.o game.o
+dhruvpatel@MacBook-Pro Project 1 % ./checkers
+
+   A B C D E F G H
+8  b . b . b . b . 8
+7  . b . b . b . b 7
+6  b . b . b . b . 6
+5  . . . . . . . . 5
+4  . . . . . . . . 4
+3  . r . r . r . r 3
+2  r . r . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Red's turn. Enter move (e.g., A3 B4): B3 C4
+
+   A B C D E F G H
+8  b . b . b . b . 8
+7  . b . b . b . b 7
+6  b . b . b . b . 6
+5  . . . . . . . . 5
+4  . . r . . . . . 4
+3  . . . r . r . r 3
+2  r . r . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Black's turn. Enter move (e.g., A3 B4): E6 F5
+
+   A B C D E F G H
+8  b . b . b . b . 8
+7  . b . b . b . b 7
+6  b . b . . . b . 6
+5  . . . . . b . . 5
+4  . . r . . . . . 4
+3  . . . r . r . r 3
+2  r . r . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Red's turn. Enter move (e.g., A3 B4): C2 B3
+
+   A B C D E F G H
+8  b . b . b . b . 8
+7  . b . b . b . b 7
+6  b . b . . . b . 6
+5  . . . . . b . . 5
+4  . . r . . . . . 4
+3  . r . r . r . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Black's turn. Enter move (e.g., A3 B4): C6 D5
+
+   A B C D E F G H
+8  b . b . b . b . 8
+7  . b . b . b . b 7
+6  b . . . . . b . 6
+5  . . . b . b . . 5
+4  . . r . . . . . 4
+3  . r . r . r . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Red's turn. Enter move (e.g., A3 B4): C4 E6
+
+   A B C D E F G H
+8  b . b . b . b . 8
+7  . b . b . b . b 7
+6  b . . . r . b . 6
+5  . . . . . b . . 5
+4  . . . . . . . . 4
+3  . r . r . r . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Black's turn. Enter move (e.g., A3 B4): F7 D5
+
+   A B C D E F G H
+8  b . b . b . b . 8
+7  . b . b . . . b 7
+6  b . . . . . b . 6
+5  . . . b . b . . 5
+4  . . . . . . . . 4
+3  . r . r . r . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Red's turn. Enter move (e.g., A3 B4): D3 C4
+
+   A B C D E F G H
+8  b . b . b . b . 8
+7  . b . b . . . b 7
+6  b . . . . . b . 6
+5  . . . b . b . . 5
+4  . . r . . . . . 4
+3  . r . . . r . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Black's turn. Enter move (e.g., A3 B4): G8 F7
+
+   A B C D E F G H
+8  b . b . b . . . 8
+7  . b . b . b . b 7
+6  b . . . . . b . 6
+5  . . . b . b . . 5
+4  . . r . . . . . 4
+3  . r . . . r . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Red's turn. Enter move (e.g., A3 B4): C4 G8
+Invalid move. Try again.
+
+   A B C D E F G H
+8  b . b . b . . . 8
+7  . b . b . b . b 7
+6  b . . . . . b . 6
+5  . . . b . b . . 5
+4  . . r . . . . . 4
+3  . r . . . r . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Red's turn. Enter move (e.g., A3 B4): C4 E6
+
+   A B C D E F G H
+8  b . b . b . R . 8
+7  . b . b . . . b 7
+6  b . . . . . b . 6
+5  . . . . . b . . 5
+4  . . . . . . . . 4
+3  . r . . . r . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Black's turn. Enter move (e.g., A3 B4): E8F7        
+
+   A B C D E F G H
+8  b . b . . . R . 8
+7  . b . b . b . b 7
+6  b . . . . . b . 6
+5  . . . . . b . . 5
+4  . . . . . . . . 4
+3  . r . . . r . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Red's turn. Enter move (e.g., A3 B4): G8 E6
+
+   A B C D E F G H
+8  b . b . . . . . 8
+7  . b . b . . . b 7
+6  b . . . . . b . 6
+5  . . . . . . . . 5
+4  . . . . . . R . 4
+3  . r . . . r . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Red's turn. Enter move (e.g., A3 B4): G8 E6
+
+   A B C D E F G H
+8  b . b . . . . . 8
+7  . b . b . . . b 7
+6  b . . . . . b . 6
+5  . . . . . . . . 5
+4  . . . . . . R . 4
+3  . r . . . r . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Black's turn. Enter move (e.g., A3 B4): G6 F5
+
+   A B C D E F G H
+8  b . b . . . . . 8
+7  . b . b . . . b 7
+6  b . . . . . . . 6
+5  . . . . . b . . 5
+4  . . . . . . R . 4
+3  . r . . . r . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Red's turn. Enter move (e.g., A3 B4): G4 E6
+
+   A B C D E F G H
+8  b . b . . . . . 8
+7  . b . b . . . b 7
+6  b . . . R . . . 6
+5  . . . . . . . . 5
+4  . . . . . . . . 4
+3  . r . . . r . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Black's turn. Enter move (e.g., A3 B4): D7 F5
+
+   A B C D E F G H
+8  b . b . . . . . 8
+7  . b . . . . . b 7
+6  b . . . . . . . 6
+5  . . . . . b . . 5
+4  . . . . . . . . 4
+3  . r . . . r . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Red's turn. Enter move (e.g., A3 B4): F3 G4
+
+   A B C D E F G H
+8  b . b . . . . . 8
+7  . b . . . . . b 7
+6  b . . . . . . . 6
+5  . . . . . b . . 5
+4  . . . . . . r . 4
+3  . r . . . . . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Black's turn. Enter move (e.g., A3 B4): C8 D7
+
+   A B C D E F G H
+8  b . . . . . . . 8
+7  . b . b . . . b 7
+6  b . . . . . . . 6
+5  . . . . . b . . 5
+4  . . . . . . r . 4
+3  . r . . . . . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Red's turn. Enter move (e.g., A3 B4): G4 E6
+
+   A B C D E F G H
+8  b . R . . . . . 8
+7  . b . . . . . b 7
+6  b . . . . . . . 6
+5  . . . . . . . . 5
+4  . . . . . . . . 4
+3  . r . . . . . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Black's turn. Enter move (e.g., A3 B4): A6 B5
+
+   A B C D E F G H
+8  b . R . . . . . 8
+7  . b . . . . . b 7
+6  . . . . . . . . 6
+5  . b . . . . . . 5
+4  . . . . . . . . 4
+3  . r . . . . . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Red's turn. Enter move (e.g., A3 B4): C8 A6
+
+   A B C D E F G H
+8  b . . . . . . . 8
+7  . . . . . . . b 7
+6  . . . . . . . . 6
+5  . . . . . . . . 5
+4  . . R . . . . . 4
+3  . r . . . . . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Black's turn. Enter move (e.g., A3 B4): A8 B7
+
+   A B C D E F G H
+8  . . . . . . . . 8
+7  . b . . . . . b 7
+6  . . . . . . . . 6
+5  . . . . . . . . 5
+4  . . R . . . . . 4
+3  . r . . . . . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Red's turn. Enter move (e.g., A3 B4): C4 B5
+
+   A B C D E F G H
+8  . . . . . . . . 8
+7  . b . . . . . b 7
+6  . . . . . . . . 6
+5  . R . . . . . . 5
+4  . . . . . . . . 4
+3  . r . . . . . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Black's turn. Enter move (e.g., A3 B4): B7 C6
+
+   A B C D E F G H
+8  . . . . . . . . 8
+7  . . . . . . . b 7
+6  . . b . . . . . 6
+5  . R . . . . . . 5
+4  . . . . . . . . 4
+3  . r . . . . . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Red's turn. Enter move (e.g., A3 B4): B5 D7
+
+   A B C D E F G H
+8  . . . . . . . . 8
+7  . . . R . . . b 7
+6  . . . . . . . . 6
+5  . . . . . . . . 5
+4  . . . . . . . . 4
+3  . r . . . . . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Black's turn. Enter move (e.g., A3 B4): H7 G6
+
+   A B C D E F G H
+8  . . . . . . . . 8
+7  . . . R . . . . 7
+6  . . . . . . b . 6
+5  . . . . . . . . 5
+4  . . . . . . . . 4
+3  . r . . . . . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Red's turn. Enter move (e.g., A3 B4): D7 E6
+
+   A B C D E F G H
+8  . . . . . . . . 8
+7  . . . . . . . . 7
+6  . . . . R . b . 6
+5  . . . . . . . . 5
+4  . . . . . . . . 4
+3  . r . . . . . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Black's turn. Enter move (e.g., A3 B4): G6 F5
+
+   A B C D E F G H
+8  . . . . . . . . 8
+7  . . . . . . . . 7
+6  . . . . R . . . 6
+5  . . . . . b . . 5
+4  . . . . . . . . 4
+3  . r . . . . . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Red's turn. Enter move (e.g., A3 B4): E6 G4
+
+   A B C D E F G H
+8  . . . . . . . . 8
+7  . . . . . . . . 7
+6  . . . . . . . . 6
+5  . . . . . . . . 5
+4  . . . . . . R . 4
+3  . r . . . . . r 3
+2  r . . . r . r . 2
+1  . r . r . r . r 1
+   A B C D E F G H
+
+Red wins!

@@ -1,23 +1,20 @@
 #include <stdio.h>
-#include <stdbool.h>
-#include <string.h>
 #include <ctype.h>
+#include <stdbool.h>
 #include "board.h"
 #include "game.h"
-
 
 
 int coordToPos(char file, int rank){
     if(!isalpha((unsigned char)file)) return -1;
     int col = toupper((unsigned char)file) - 'A';
-    int r = rank;
+    int r = rank - 1;
     if(col < 0 || col > 7) return -1;
-    if(r < 1 || r > 8) return -1;
-    int row = 8 - r; // flip
-    return row * 8 + col;
+    if(r < 0 || r > 7) return -1;
+    return r * 8 + col;
 }
 
-int main(){
+int main(void){
     GameState game;
     InitializeBoard(&game);
 
@@ -34,20 +31,18 @@ int main(){
         }
 
         printf("%s's turn. Enter move (e.g., A3 B4): ", game.turn == 0 ? "Red" : "Black");
-
-        char fromFile = 0, toFile = 0;
-        int fromRank = 0, toRank = 0;
-        if(scanf(" %c%d %c%d", &fromFile, &fromRank, &toFile, &toRank) != 4){
-            printf("Invalid input format. Try again.\n");
-            while(getchar() != '\n'); // clear remainder
+        char ffile=0, tfile=0;
+        int frank=0, trank=0;
+        if(scanf(" %c%d %c%d", &ffile, &frank, &tfile, &trank) != 4){
+            printf("Invalid input format. Use like: A3 B4\n");
+            while(getchar() != '\n'); // flush
             continue;
         }
 
-        int from = coordToPos(fromFile, fromRank);
-        int to   = coordToPos(toFile, toRank);
-
+        int from = coordToPos(ffile, frank);
+        int to   = coordToPos(tfile, trank);
         if(from < 0 || to < 0){
-            printf("Coordinates out of range. Use files A-H and ranks 1-8.\n");
+            printf("Coordinates out of range. Use A1..H8\n");
             continue;
         }
 
